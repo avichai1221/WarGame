@@ -52,7 +52,6 @@ board.print();
         board.move(2, {7,3}, Board::MoveDIR::Left);    // FootCommander of player 2 moves left, and all soldiers of player 2 attack.
         if (!board.has_soldiers(1)) return 2;
         board.print();
-        std::cout<< board[{7,2}]->health<<std::endl;
         /// Write more moves here..
 
 

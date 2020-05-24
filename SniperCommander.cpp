@@ -24,6 +24,9 @@ namespace WarGame {
                     }
 
                 }
+                if(board[i][j]!= nullptr&&board[i][j]->teamNum== this->teamNum&&board[i][j]->damage==50){
+                    board[i][j]->attack(board,i,j);
+                }
             }
         }
         if(board[saveLocation.first][saveLocation.second]->health<=100)

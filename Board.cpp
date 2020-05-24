@@ -86,7 +86,7 @@ namespace WarGame {
                 else {
                     board[source.first][source.second+1] = board[source.first][source.second];
                     board[source.first][source.second] = nullptr;
-                  //  board[source.first][source.second+1]->attack(board,source.first,source.second+1);
+                    board[source.first][source.second+1]->attack(board,source.first,source.second+1);
 
                 }
                 break;
