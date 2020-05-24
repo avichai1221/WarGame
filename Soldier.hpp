@@ -2,7 +2,7 @@
 // Created by avichai on 5/18/20.
 //
 #pragma once
-
+#include <vector>
 
 class Soldier {
 public:
@@ -20,7 +20,7 @@ this->teamNum=teamNum;
 }
 
 
-    virtual void attack()=0;
+    virtual void attack (std::vector<std::vector<Soldier*>> &board, int first, int second) = 0;
 
 
 };

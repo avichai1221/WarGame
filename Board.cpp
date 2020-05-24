@@ -51,7 +51,7 @@ namespace WarGame {
                     else {
                         board[source.first - 1][source.second] = board[source.first][source.second];
                         board[source.first][source.second] = nullptr;
-                        board[source.first-1][source.second]->attack();
+                        board[source.first-1][source.second]->attack(board,source.first-1,source.second);
                     }
                 break;
 
@@ -62,7 +62,8 @@ namespace WarGame {
                       else {
                           board[source.first + 1][source.second] = board[source.first][source.second];
                           board[source.first][source.second] = nullptr;
-                        //  board[source.first+1][source.second]->attack();
+                          board[source.first+1][source.second]->attack(board,source.first+1,source.second);
+
                       }
             case MoveDIR::Left :
 
@@ -71,7 +72,7 @@ namespace WarGame {
                 else {
                     board[source.first][source.second-1] = board[source.first][source.second];
                     board[source.first][source.second] = nullptr;
-                  //  board[source.first][source.second-1]->attack();
+                  //  board[source.first][source.second-1]->attack(board,source.first,source.second-1);
                 }
                 break;
 
@@ -82,7 +83,8 @@ namespace WarGame {
                 else {
                     board[source.first][source.second+1] = board[source.first][source.second];
                     board[source.first][source.second] = nullptr;
-                 //   board[source.first][source.second+1]->attack();
+                  //  board[source.first][source.second+1]->attack(board,source.first,source.second+1);
+
                 }
                 break;
             default:

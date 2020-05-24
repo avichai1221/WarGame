@@ -1,7 +1,6 @@
 #include "Soldier.hpp"
-
-
-
+//#include "Board.hpp"
+#include <vector>
 
 
     namespace WarGame {
@@ -15,7 +14,7 @@
 
 
 
-            void attack() override;
+            void attack (std::vector<std::vector<Soldier*>> &board, int first, int second) override ;
         };
 
 
