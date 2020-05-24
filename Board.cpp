@@ -44,7 +44,7 @@ namespace WarGame {
             board[source.first][source.second]->teamNum != player_number)
             throw std::invalid_argument("we do not have a solider in this place OR this player is not yours");
         switch (direction) {
-            case MoveDIR::Down :
+            case MoveDIR::Down:
 
                     if (source.first - 1 < 0 || board[source.first - 1][source.second] != nullptr)
                         throw std::invalid_argument("you can not go there");
@@ -55,7 +55,7 @@ namespace WarGame {
                     }
                 break;
 
-                  case MoveDIR::Up :
+                  case MoveDIR::Up:
 
                       if (source.first + 1 > board.size() || board[source.first + 1][source.second] != nullptr)
                           throw std::invalid_argument("you can not go there");
@@ -65,14 +65,17 @@ namespace WarGame {
                           board[source.first+1][source.second]->attack(board,source.first+1,source.second);
 
                       }
-            case MoveDIR::Left :
+                break;
 
-                if (source.second - 1 < 0 || board[source.first][source.second-1] != nullptr)
-                    throw std::invalid_argument("you can not go there");
-                else {
+            case MoveDIR::Left:
+
+                     if (source.second - 1 < 0 || board[source.first][source.second-1] != nullptr)
+                         throw std::invalid_argument("you can not go there");
+                   else {
+                   // std::cout<<"jjjjjj"<<board[source.first][source.second]->health<<std::endl;
                     board[source.first][source.second-1] = board[source.first][source.second];
                     board[source.first][source.second] = nullptr;
-                  //  board[source.first][source.second-1]->attack(board,source.first,source.second-1);
+                   board[source.first][source.second-1]->attack(board,source.first,source.second-1);
                 }
                 break;
 

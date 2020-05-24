@@ -31,7 +31,7 @@ namespace WarGame {
      if(board[saveLocation.first][saveLocation.second]->health<=10)
          board[saveLocation.first][saveLocation.second]= nullptr;
      else{
-         board[saveLocation.first][saveLocation.second]->health-20;
+         board[saveLocation.first][saveLocation.second]->health-=20;
      }
 
 
