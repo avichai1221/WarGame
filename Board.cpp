@@ -26,8 +26,8 @@ namespace WarGame {
 
     Soldier* &Board::operator[](std::pair<int, int> location)
     {
-       // if(board[location.first][location.second] != nullptr)
-         //   throw std::invalid_argument("This place is busy");
+      //  if(board[location.first][location.second] != nullptr)
+       //     throw std::invalid_argument("This place is busy");
 
         return board[location.first][location.second];
     }
@@ -39,10 +39,13 @@ namespace WarGame {
     }
 
     void Board::move(uint player_number, std::pair<int, int> source, WarGame::Board::MoveDIR direction) {
-
+        if(source.first<0||source.first>=board.size()||source.second<0||source.second>=board[0].size())
+            throw std::invalid_argument("you out from board");
         if (board[source.first][source.second] == nullptr ||
             board[source.first][source.second]->teamNum != player_number)
             throw std::invalid_argument("we do not have a solider in this place OR this player is not yours");
+
+
         switch (direction) {
             case MoveDIR::Down:
 
@@ -57,7 +60,7 @@ namespace WarGame {
 
                   case MoveDIR::Up:
 
-                      if (source.first + 1 > board.size() || board[source.first + 1][source.second] != nullptr)
+                      if (source.first + 1 >= board.size() || board[source.first + 1][source.second] != nullptr)
                           throw std::invalid_argument("you can not go there");
                       else {
                           board[source.first + 1][source.second] = board[source.first][source.second];
@@ -81,7 +84,7 @@ namespace WarGame {
 
             case MoveDIR::Right :
 
-                if (source.second + 1 > board.size() || board[source.first][source.second+1] != nullptr)
+                if (source.second + 1 >= board.size() || board[source.first][source.second+1] != nullptr)
                     throw std::invalid_argument("you can not go there");
                 else {
                     board[source.first][source.second+1] = board[source.first][source.second];

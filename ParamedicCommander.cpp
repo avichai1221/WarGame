@@ -22,7 +22,7 @@ namespace WarGame {
             }
 
         }
-        if(first!=board.size()&&board[first+1][second]!= nullptr&&board[first+1][second]->teamNum== this->teamNum)
+        if(first<board.size()-2&&board[first+1][second]!= nullptr&&board[first+1][second]->teamNum== this->teamNum)
         {
             if (board[first+1][second]->damage==0||board[first+1][second]->damage==50||board[first+1][second]->damage==100)
                 board[first+1][second]->health=100;
@@ -52,7 +52,7 @@ namespace WarGame {
             }
 
         }
-        if(second!=board[0].size()&&board[first][second+1]!= nullptr&&board[first][second+1]->teamNum== this->teamNum)
+        if(second<=board[0].size()-2&&board[first][second+1]!= nullptr&&board[first][second+1]->teamNum== this->teamNum)
         {
             if (board[first][second+1]->damage==0||board[first][second+1]->damage==50||board[first][second+1]->damage==100) {
                 board[first][second+1]->health = 100;

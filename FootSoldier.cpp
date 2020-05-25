@@ -26,8 +26,6 @@ namespace WarGame {
                         saveLocation.second=j;
                     }
 
-
-
                 }
             }
         }
