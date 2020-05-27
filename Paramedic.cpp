@@ -7,7 +7,7 @@ namespace WarGame {
     void Paramedic::attack(std::vector<std::vector<Soldier *>> &board, int first, int second){
        if(first!=0&&board[first-1][second]!= nullptr&&board[first-1][second]->teamNum== this->teamNum)
        {
-           if (board[first-1][second]->damage==0||board[first-1][second]->damage==50||board[first-1][second]->damage==100) {
+           if (board[first-1][second]->damage==0||board[first-1][second]->damage==50||board[first-1][second]->damage==10) {
                board[first - 1][second]->health = 100;
            }
            else if(board[first-1][second]->damage==-1){ //PramedicCommander
@@ -23,7 +23,7 @@ namespace WarGame {
        }
         if(first<board.size()-2&&board[first+1][second]!= nullptr&&board[first+1][second]->teamNum== this->teamNum)
         {
-            if (board[first+1][second]->damage==0||board[first+1][second]->damage==50||board[first+1][second]->damage==100)
+            if (board[first+1][second]->damage==0||board[first+1][second]->damage==50||board[first+1][second]->damage==10)
                 board[first+1][second]->health=100;
             else if(board[first+1][second]->damage==-1){ //PramedicCommander
                 board[first+1][second]->health=200;
@@ -37,7 +37,7 @@ namespace WarGame {
         }
         if(second!=0&&board[first][second-1]!= nullptr&&board[first][second-1]->teamNum== this->teamNum)
         {
-            if (board[first][second-1]->damage==0||board[first][second-1]->damage==50||board[first][second-1]->damage==100) {
+            if (board[first][second-1]->damage==0||board[first][second-1]->damage==50||board[first][second-1]->damage==10) {
                 board[first][second-1]->health = 100;
             }
             else if(board[first][second-1]->damage==-1){ //PramedicCommander
@@ -53,7 +53,7 @@ namespace WarGame {
         }
         if(second<board[0].size()-2&&board[first][second+1]!= nullptr&&board[first][second+1]->teamNum== this->teamNum)
         {
-            if (board[first][second+1]->damage==0||board[first][second+1]->damage==50||board[first][second+1]->damage==100) {
+            if (board[first][second+1]->damage==0||board[first][second+1]->damage==50||board[first][second+1]->damage==10) {
                 board[first][second+1]->health = 100;
             }
             else if(board[first][second+1]->damage==-1){ //PramedicCommander
