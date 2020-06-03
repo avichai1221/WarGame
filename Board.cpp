@@ -26,8 +26,8 @@ namespace WarGame {
 
     Soldier* &Board::operator[](std::pair<int, int> location)
     {
-      //  if(board[location.first][location.second] != nullptr)
-       //     throw std::invalid_argument("This place is busy");
+     /*   if(board[location.first][location.second] != nullptr)
+            throw std::invalid_argument("This place is busy");*/
 
         return board[location.first][location.second];
     }

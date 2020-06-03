@@ -24,7 +24,7 @@
                 }
             }
         }
-        if(board[saveLocation.first][saveLocation.second]->health<=50)
+        if(board[saveLocation.first][saveLocation.second]== nullptr||board[saveLocation.first][saveLocation.second]->health<=50)
             board[saveLocation.first][saveLocation.second]= nullptr;
         else{
             board[saveLocation.first][saveLocation.second]->health-=50;
