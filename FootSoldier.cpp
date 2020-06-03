@@ -5,7 +5,7 @@
 #include <tgmath.h>
 
 #include "FootSoldier.hpp"
-namespace WarGame {
+//namespace WarGame {
 
 
     void FootSoldier::attack(std::vector<std::vector<Soldier *>> &board, int first, int second){
@@ -36,4 +36,4 @@ namespace WarGame {
         }
 
     }
-};
+//};

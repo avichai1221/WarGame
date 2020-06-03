@@ -1,6 +1,6 @@
 #include "Sniper.hpp"
 #include "Board.hpp"
-namespace WarGame {
+//namespace WarGame {
 
 
     void Sniper::attack(std::vector<std::vector<Soldier *>> &board, int first, int second){
@@ -31,4 +31,4 @@ namespace WarGame {
         }
 
     }
-};
+//};

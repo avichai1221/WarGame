@@ -2,7 +2,7 @@
 #include "Board.hpp"
 #include <tgmath.h>
 
-namespace WarGame {
+//namespace WarGame {
 
 
     void SniperCommander::attack(std::vector<std::vector<Soldier *>> &board, int first, int second){
@@ -35,4 +35,4 @@ namespace WarGame {
             board[saveLocation.first][saveLocation.second]->health-=100;
         }
     }
-};
+//};

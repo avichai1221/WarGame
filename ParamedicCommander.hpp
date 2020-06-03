@@ -1,7 +1,7 @@
 #include "Soldier.hpp"
 
 
-namespace WarGame {
+//namespace WarGame {
 
 
 
@@ -17,4 +17,4 @@ namespace WarGame {
 
 
 
-};
+//};

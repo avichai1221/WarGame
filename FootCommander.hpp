@@ -3,7 +3,7 @@
 #include <vector>
 
 
-    namespace WarGame {
+  //  namespace WarGame {
 
 
 
@@ -19,4 +19,4 @@
 
 
 
-    };
+  //  };
